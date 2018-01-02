@@ -1,4 +1,4 @@
- OSCCON = 0b00111000; 
+
 /**
  *******************************************************************
  * Lesson 2 - "Blink"
@@ -39,7 +39,7 @@ __CONFIG(WRT_OFF & PLLEN_OFF & STVREN_OFF & LVP_OFF);
 void main(void) {
     unsigned int delay;             //create a variable of 16 bits in length
     
-                                  //500KHz clock speed
+    OSCCON = 0b00111000;            
     TRISCbits.TRISC0 = 0;                               //using pin as output
     delay = 11250;
     while (1) {
